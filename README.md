@@ -1,6 +1,6 @@
 # Simple Chain Application
 
-This simple project is to understanding how blockhain works through node js
+This simple project is to understanding how blockchain works with node js
 ## Quick Start
 
 1. npm install
