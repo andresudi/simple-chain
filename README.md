@@ -4,6 +4,40 @@
 
 1. npm install
 2. node simpleChain2.js
+3. Example Result
+
+```
+[
+  Block {
+    hash: '592f6f76efa7dca0194d91b09eacbd0147a1c48f00a008c496f848a00f2c6236',
+    height: 0,
+    body: 'First data in simple chain a.k.a genesi block',
+    timestamp: '1643110435495',
+    previousblockhash: ''
+  },
+  Block {
+    hash: '94685a165612bbf4850569fe19223ac726ef3cabe0e7463e832be2cde1741163',
+    height: 1,
+    body: '1st data',
+    timestamp: '1643110435498',
+    previousblockhash: '592f6f76efa7dca0194d91b09eacbd0147a1c48f00a008c496f848a00f2c6236'
+  },
+  Block {
+    hash: '02917d071b6420cb950e52ae9b8b99eb12927f596b9846805810aa3496ef6c7c',
+    height: 2,
+    body: '2nd data',
+    timestamp: '1643110435499',
+    previousblockhash: '94685a165612bbf4850569fe19223ac726ef3cabe0e7463e832be2cde1741163'
+  },
+  Block {
+    hash: 'fd78dbfde4d7eff01deb3bd66b3bebb8983f821ca9458f0218455ce65d812c4e',
+    height: 3,
+    body: '3rd data',
+    timestamp: '1643110435499',
+    previousblockhash: '02917d071b6420cb950e52ae9b8b99eb12927f596b9846805810aa3496ef6c7c'
+  }
+]
+```
 
 ## Explanation
 
@@ -136,7 +170,7 @@ class Blockchain {
         newBlock.hash = SHA256(JSON.stringify(newBlock)).toString();
 
         console.log(JSON.stringify(newBlock));
-        
+
         // add block to chain
         this.chain.push(newBlock);
     }
